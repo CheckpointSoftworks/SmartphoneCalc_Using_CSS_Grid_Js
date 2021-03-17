@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", sans-serif;
+    margin: 25px;
+  }
+  
+  .calculator {
+    height: 664px;
+    padding: 12px;
+    position: relative;
+    width: 345px;
+    background: black;
+    border-radius: 30px;
+    color: white;
+  }
+  
+  .top-area {
+    justify-content: space-between;
+    padding: 0 12px;
+    display: flex;
+    height: 122px;
+  }
+  
+  .value {
+    margin-bottom: 12px;
+    margin-right: 12px;
+    text-align: right;
+    font-size: 80px;
+    font-weight: 140;
+    height: 97px;
+  }
+  
+  .button-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    display: grid;
+    grid-gap: 12px;
+  }
+  
+  .button {
+    height: 67px;
+    justify-content: center;
+    transition: filter .3s;
+    width: 67px;
+    align-items: center;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    font-size: 28px;
+  }
+  
+  .button.function {
+    color: black;
+    background: #a5a5a5;
+  }
+  
+  .button.operator {
+    background: #f1a33c;
+  }
+  
+  .button.number-0 {
+    border-radius: 55px;
+    grid-column: 1 / span 2;
+    justify-content: flex-start;
+    padding-left: 43px;
+    width: 250px;
+  }
+  
+  /* When the button is clicked, increases the brightness by 120% */
+  .button:active,
+  .button:focus {
+    filter: brightness(125%);
+  }
+  
+  /* Position absolute + left of 50% + translate of 50% centers the item */
+  .bottom {
+    width: 123px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
